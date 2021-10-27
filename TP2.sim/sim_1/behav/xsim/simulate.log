@@ -1,0 +1,18 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+din1 = xxxxxxxx                   0
+rx2done = x                   0
+rx2done = 0                  10
+din1 = 11110110                  30
+din1 = 01100000              625950
+din1 = 00100000             1251870
+din1 = 11101011             1877790
+rx2done = 1             2451530
+dout2 = 01010110             2451550
+rx2done = 0             2451550
+din1 = 00110110             2503710
+rx2done = 1             3077450
+dout2 = 01010110             3077470
+rx2done = 0             3077470
+din1 = 00100111             3129630
+din1 = 11010100             3755550

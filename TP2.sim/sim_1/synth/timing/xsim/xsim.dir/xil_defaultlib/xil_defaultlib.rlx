@@ -1,0 +1,7 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Vivado/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v,1635187739,verilog,,C:/Vivado/TP2/TP2.srcs/sources_1/new/UART.v,,ALU;FIFO;Interfaz;RAM32M_HD1;RAM32M_HD2;RAM32M_HD3;RAM32M_UNIQ_BASE_;Top;glbl,,,,,,,,
+C:/Vivado/TP2/TP2.srcs/sim_1/new/Top_tb.v,1635115608,verilog,,,,Top_tb,,,,,,,,
+C:/Vivado/TP2/TP2.srcs/sources_1/new/UART.v,1635121521,verilog,,C:/Vivado/TP2/TP2.srcs/sim_1/new/Top_tb.v,,UART,,,,,,,,
