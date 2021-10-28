@@ -2,6 +2,6 @@
 2019.2
 Nov  6 2019
 21:57:16
-C:/Vivado/TP2/TP2.sim/sim_1/impl/timing/xsim/Top_tb_time_impl.v,1635189056,verilog,,C:/Vivado/TP2/TP2.srcs/sources_1/new/UART.v,,ALU;FIFO;Interfaz;RAM32M_HD4;RAM32M_HD5;RAM32M_HD6;RAM32M_UNIQ_BASE_;Top;glbl,,,,,,,,
-C:/Vivado/TP2/TP2.srcs/sim_1/new/Top_tb.v,1635186956,verilog,,,,Top_tb,,,,,,,,
-C:/Vivado/TP2/TP2.srcs/sources_1/new/UART.v,1635185832,verilog,,C:/Vivado/TP2/TP2.srcs/sim_1/new/Top_tb.v,,UART,,,,,,,,
+C:/Users/TomasMartin/TP2/TP2.sim/sim_1/impl/timing/xsim/UART_tb_time_impl.v,1635452957,verilog,,C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/UART_tb.v,,UART;glbl,,,,,,,,
+C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/Top_tb.v,1635431229,verilog,,,,Top_tb,,,,,,,,
+C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/UART_tb.v,1635378914,verilog,,,,UART_tb,,,,,,,,

@@ -1,18 +1,18 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 080add03e1c74a0599fb095fd62d0979 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot Top_tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto f638b01cc97c4d0f836a5c53f275af56 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot Top_tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-3180] cannot find port 'tx_read' on this module [C:/Vivado/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3004]
-ERROR: [VRFC 10-3180] cannot find port 'tx_OBUF' on this module [C:/Vivado/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3003]
-ERROR: [VRFC 10-3180] cannot find port 't_empty' on this module [C:/Vivado/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3002]
-ERROR: [VRFC 10-3180] cannot find port 'rx_write' on this module [C:/Vivado/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3001]
-ERROR: [VRFC 10-3180] cannot find port 'rx_IBUF' on this module [C:/Vivado/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3000]
-ERROR: [VRFC 10-3180] cannot find port 'r_write_enable' on this module [C:/Vivado/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:2999]
-ERROR: [VRFC 10-3180] cannot find port 'r_memoria_reg_0_7_0_5' on this module [C:/Vivado/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:2998]
-ERROR: [VRFC 10-3180] cannot find port 'SR' on this module [C:/Vivado/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:2997]
-ERROR: [VRFC 10-3180] cannot find port 'Q' on this module [C:/Vivado/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:2996]
-ERROR: [VRFC 10-3180] cannot find port 'D' on this module [C:/Vivado/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:2995]
-ERROR: [VRFC 10-3180] cannot find port 'CLK' on this module [C:/Vivado/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:2994]
+ERROR: [VRFC 10-3180] cannot find port 'tx_start_UART' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3042]
+ERROR: [VRFC 10-3180] cannot find port 'tx_read' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3041]
+ERROR: [VRFC 10-3180] cannot find port 'tx_OBUF' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3040]
+ERROR: [VRFC 10-3180] cannot find port 'rx_write' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3039]
+ERROR: [VRFC 10-3180] cannot find port 'rx_IBUF' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3038]
+ERROR: [VRFC 10-3180] cannot find port 'r_memoria_reg_0_7_6_7' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3037]
+ERROR: [VRFC 10-3180] cannot find port 'r_done_reg_0' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3036]
+ERROR: [VRFC 10-3180] cannot find port 'SR' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3035]
+ERROR: [VRFC 10-3180] cannot find port 'Q' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3034]
+ERROR: [VRFC 10-3180] cannot find port 'D' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3033]
+ERROR: [VRFC 10-3180] cannot find port 'CLK' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3032]
 ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

@@ -27,10 +27,10 @@ clock=1'b0;
 reset=1'b1;
 repeat(2)@(posedge clock);
 reset=1'b0;
-din1 = 8'b11111101;
+din1 = 8'b11110101;
 tx_start2 = 1'b0;
 tx_start1 = 1'b1;
-#100
+repeat(5)@(posedge clock);
 tx_start1 = 1'b0;
 end
 
@@ -43,14 +43,19 @@ always begin
     #`CLK clock = ~clock;
 end
 
-always@(posedge clock) begin
-rx2 <= tx1;
-rx1 <= tx2;
+always@(*) begin
+rx2 = tx1;
+rx1 = tx2;
+end
+
+always@(*) begin
     if(rx_done2==1'b1) begin
-        din2 <= dout2;
-        tx_start2 <= 1'b1;
-        #100
-        tx_start2 <= 1'b0;
+        din2 = dout2;
+        tx_start2 = 1'b1;
+        repeat(5)@(posedge clock);
+    end
+    else begin
+        tx_start2 = 1'b0;
     end
 end
 

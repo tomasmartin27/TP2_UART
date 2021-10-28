@@ -33,8 +33,10 @@ wire r_write_enable;
 
 reg [SIZE_FIFO-1:0] t_write_ptr, t_w_ptr_next, t_w_ptr_sig;
 reg [SIZE_FIFO-1:0] t_read_ptr, t_r_ptr_next, t_r_ptr_sig;
-reg t_full, t_empty, t_full_next, t_empty_next;
+reg t_full, t_empty, t_start, t_full_next, t_empty_next, t_start_next;
 wire t_write_enable;
+
+integer i, i_next;
 
 always@(posedge clock) begin: Memoria_FIFO_receptor
     if(reset) begin
@@ -102,12 +104,16 @@ always@(posedge clock) begin: Memoria_FIFO_transmisor
        t_read_ptr<={SIZE_FIFO-1{1'b0}};
        t_full<=1'b0;
        t_empty<=1'b1;
+       t_start<=1'b0;
+       i<=0;
     end
     else  begin
        t_write_ptr<=t_w_ptr_next;
        t_read_ptr<=t_r_ptr_next;
        t_full<=t_full_next;
        t_empty<=t_empty_next;
+       t_start<=t_start_next;
+       i<=i_next;
     end
 end
 
@@ -151,9 +157,25 @@ always@(posedge clock) begin: RW_FIFO_transmisor
 if(t_write_enable) t_memoria[t_write_ptr] <= tx_data_write;
 end
 
+always@(*) begin
+t_start_next = t_start;
+i_next = i;
+if(~t_empty) begin
+    if(t_start) t_start_next = 1'b0;
+    else if (~t_start && i==0) begin
+    t_start_next = 1'b1;
+    i_next = 1;
+    end
+end
+else begin
+t_start_next = 1'b0;
+i_next = 0;
+end
+end
+
 assign t_write_enable = tx_write & ~t_full;
 assign tx_data_read = t_memoria[t_read_ptr];
-assign tx_start = ~t_empty;
+assign tx_start = t_start;
 assign tx_full = t_full;
 
 endmodule

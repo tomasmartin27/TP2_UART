@@ -26,10 +26,17 @@ wire rx_done1;
 wire rx_done2;
 integer i = 0;
 integer j = 0;
+integer test = 0;
+reg [D_BITS-1:0] a, b, op, expect;
+integer simtime = 10000000;
 
 initial begin
 clock=1'b0;
 reset=1'b1;
+a = {D_BITS{1'b0}};
+b = {D_BITS{1'b0}};
+op = {D_BITS{1'b0}};
+expect = {D_BITS{1'b0}};
 repeat(2)@(posedge clock);
 reset=1'b0;
 rx1 = 1'b1;
@@ -41,11 +48,10 @@ tx_start1 = 1'b0;
 end
 
 initial $monitor("din1 = %b", din1, $time);
-initial $monitor("rx2done = %b", rx_done2, $time);
 
-always@(posedge clock) begin
-rx <= tx1;
-rx2 <= tx;
+always@(*) begin
+rx = tx1;
+rx2 = tx;
 end
 
 always@(posedge clock) begin
@@ -58,6 +64,7 @@ always@(posedge clock) begin
     if(tx_done1==1'b1) begin
           if(i==0) begin
             din1 <= $urandom($time)%(2**D_BITS);
+            a <= din1;
             tx_start1 <= 1'b1;
             #100
             tx_start1 <= 1'b0;
@@ -77,6 +84,7 @@ always@(posedge clock) begin
              7: din1 <= 8'b00000010;
              8: din1 <= 8'b00111111;
          endcase
+            b <= din1;
             tx_start1 <= 1'b1;
             #100
             tx_start1 <= 1'b0;
@@ -85,6 +93,7 @@ always@(posedge clock) begin
     
     else if(i==2) begin
             din1 <= $urandom($time)%(2**D_BITS);
+            op <= din1;
             tx_start1 <= 1'b1;
             #100
             tx_start1 <= 1'b0;
@@ -97,6 +106,35 @@ always begin
     #`CLK clock = ~clock;
 end
 
+always@(posedge clock) begin: assertion_operation
+    case(op)
+        6'b100000: expect <= a+b;
+        6'b100010: expect <= a-b;
+        6'b100100: expect <= a&b;
+        6'b100101: expect <= a|b;
+        6'b100110: expect <= a^b;
+        6'b100111: expect <= ~(a|b);
+        6'b000011: expect <= $signed(a)>>>b;
+        6'b000010: expect <= a>>b;
+        default: expect <= 8'b00000000;
+    endcase
+    
+  if(rx_done2==1'b1) begin   
+    if(expect!=dout2) begin
+        $display("Error en operacion %b en tiempo %d ns", op, $time);
+        test <= 1;
+    end
+    
+    if($time>simtime) begin
+        if(test==0) 
+            $display("Test Pass");
+        else if(test==1)
+            $display("Error"); 
+     
+     $finish;
+    end
+end
+end
 
 UART#(.CLK_POR_TICK(CLK_POR_TICK), .D_BITS(D_BITS), .PARITY(PARITY), .STOP_BITS(STOP_BITS)) 
 uart1(.clock(clock), .reset(reset), .din(din1), .tx_start(tx_start1), .rx(rx1), .tx(tx1), .tx_done(tx_done1), .dout(dout1), .rx_done(rx_done1));
@@ -106,5 +144,6 @@ uart2(.clock(clock), .reset(reset), .din(din2), .tx_start(tx_start2), .rx(rx2), 
 
 Top#(.CLK_POR_TICK(CLK_POR_TICK), .D_BITS(D_BITS), .SIZE_FIFO(SIZE_FIFO), .PARITY(PARITY), .STOP_BITS(STOP_BITS))
 top (.clock(clock), .reset(reset), .rx(rx), .tx(tx));
+
 
 endmodule
