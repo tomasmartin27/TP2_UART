@@ -10,13 +10,16 @@ module Interfaz
     input wire [D_BITS-1:0] rx_data_read,
     input wire rx_empty,
     input wire tx_full,
+    input wire [D_BITS-1:0] out_alu,
     output wire [D_BITS-1:0] tx_data_write,
     output wire tx_write,
-    output wire rx_read
+    output wire rx_read,
+    output wire [D_BITS-1:0] a_alu,
+    output wire [D_BITS-1:0] b_alu,
+    output wire [D_BITS-1:0] op_alu
 );
 
-reg [D_BITS-1:0] ra, rb, rop, ra_next, rb_next, rop_next;
-wire [D_BITS-1:0] alu_out;
+reg [D_BITS-1:0] a, b, op, out, a_next, b_next, op_next, out_next;
 reg read, write, read_next, write_next;
 integer i, i_next;
 
@@ -33,18 +36,20 @@ reg [4:0] next_state = DATO_B;
 always@(posedge clock) begin
 if(reset) begin
     state <= DATO_A;
-    ra <= {D_BITS-1{1'b0}};
-    rb <= {D_BITS-1{1'b0}};
-    rop <= {D_BITS-1{1'b0}};
+    a <= {D_BITS{1'b0}};
+    b <= {D_BITS{1'b0}};
+    op <= {D_BITS{1'b0}};
+    out <= {D_BITS{1'b0}};
     read <= 1'b0;
     write <= 1'b0;
     i <= 0;
 end
 else begin
     state <= next_state;
-    ra <= ra_next;
-    rb <= rb_next;
-    rop <= rop_next;
+    a <= a_next;
+    b <= b_next;
+    op <= op_next;
+    out <= out_next;
     read <= read_next;
     write <= write_next;
     i <= i_next;
@@ -53,9 +58,10 @@ end
 
 
 always @(*) begin
-ra_next = ra; 
-rb_next = rb;
-rop_next = rop;
+a_next = a; 
+b_next = b;
+op_next = op;
+out_next = out;
 read_next = read;
 write_next = write;
 i_next = i;
@@ -63,11 +69,12 @@ i_next = i;
         DATO_A: begin
             write_next = 1'b0;
             read_next = 1'b0; 
-            ra_next = {D_BITS-1{1'b0}}; 
-            rb_next = {D_BITS-1{1'b0}};
-            rop_next = {D_BITS-1{1'b0}};
+            a_next = {D_BITS{1'b0}}; 
+            b_next = {D_BITS{1'b0}};
+            op_next = {D_BITS{1'b0}};
+            out_next = {D_BITS{1'b0}};
             if(~rx_empty) begin
-               ra_next = rx_data_read;
+               a_next = rx_data_read;
                read_next = 1'b1;
                i_next = 1;
                next_state = ESPERA;
@@ -76,7 +83,7 @@ i_next = i;
         end
         DATO_B: begin
         if(~rx_empty) begin
-            rb_next = rx_data_read;
+            b_next = rx_data_read;
             read_next = 1'b1;
             i_next = 2;
             next_state = ESPERA;
@@ -85,7 +92,7 @@ i_next = i;
         end
         DATO_OP: begin
         if(~rx_empty) begin
-            rop_next = rx_data_read;
+            op_next = rx_data_read;
             read_next = 1'b1;
             i_next = 0;
             next_state = ESPERA;
@@ -100,6 +107,7 @@ i_next = i;
         end
         RESULTADO: begin
          if(~tx_full) begin
+            out_next = out_alu;
             write_next = 1'b1;                
             next_state = DATO_A;
          end 
@@ -107,9 +115,10 @@ i_next = i;
         end
         default: begin
         next_state = state;
-        ra_next = ra;
-        rb_next = rb;
-        rop_next = rop;
+        a_next = a; 
+        b_next = b;
+        op_next = op;
+        out_next = out;
         read_next = read;
         write_next = write;
         i_next = i;
@@ -117,10 +126,11 @@ i_next = i;
         endcase
  end
 
-assign tx_data_write = alu_out;
+assign tx_data_write = out;
 assign tx_write = write;
 assign rx_read = read;
-
-ALU#(.D_BITS(D_BITS)) my_alu(.A(ra), .B(rb), .OP(rop), .OUT(alu_out));
+assign a_alu = a;
+assign b_alu = b;
+assign op_alu = op;
         
 endmodule

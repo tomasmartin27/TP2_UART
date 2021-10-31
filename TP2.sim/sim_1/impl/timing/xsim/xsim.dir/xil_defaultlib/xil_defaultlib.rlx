@@ -2,6 +2,7 @@
 2019.2
 Nov  6 2019
 21:57:16
-C:/Users/TomasMartin/TP2/TP2.sim/sim_1/impl/timing/xsim/UART_tb_time_impl.v,1635452957,verilog,,C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/UART_tb.v,,UART;glbl,,,,,,,,
-C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/Top_tb.v,1635431229,verilog,,,,Top_tb,,,,,,,,
-C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/UART_tb.v,1635378914,verilog,,,,UART_tb,,,,,,,,
+C:/Users/TomasMartin/TP2/TP2.sim/sim_1/impl/timing/xsim/Top_tb_time_impl.v,1635710682,verilog,,C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/Top_tb.v,,ALU;FIFO;Interfaz;RAM32M_HD7;RAM32M_HD8;RAM32M_HD9;RAM32M_UNIQ_BASE_;Top;UART;glbl,,,,,,,,
+C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/ALU_tb.v,1635695608,verilog,,,,ALU_tb,,,,,,,,
+C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/Top_tb.v,1635710249,verilog,,,,Top_tb,,,,,,,,
+C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/UART_tb.v,1635452604,verilog,,,,UART_tb,,,,,,,,

@@ -4,15 +4,39 @@ Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto f638b01cc9
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-3180] cannot find port 'tx_start_UART' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3042]
-ERROR: [VRFC 10-3180] cannot find port 'tx_read' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3041]
-ERROR: [VRFC 10-3180] cannot find port 'tx_OBUF' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3040]
-ERROR: [VRFC 10-3180] cannot find port 'rx_write' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3039]
-ERROR: [VRFC 10-3180] cannot find port 'rx_IBUF' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3038]
-ERROR: [VRFC 10-3180] cannot find port 'r_memoria_reg_0_7_6_7' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3037]
-ERROR: [VRFC 10-3180] cannot find port 'r_done_reg_0' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3036]
-ERROR: [VRFC 10-3180] cannot find port 'SR' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3035]
-ERROR: [VRFC 10-3180] cannot find port 'Q' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3034]
-ERROR: [VRFC 10-3180] cannot find port 'D' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3033]
-ERROR: [VRFC 10-3180] cannot find port 'CLK' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v:3032]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "Top_tb_time_synth.sdf", for root module "Top_tb/top".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "Top_tb_time_synth.sdf", for root module "Top_tb/top".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.ALU
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.FDSE_default
+Compiling module simprims_ver.RAMD32
+Compiling module simprims_ver.RAMS32
+Compiling module xil_defaultlib.RAM32M_UNIQ_BASE_
+Compiling module xil_defaultlib.RAM32M_HD4
+Compiling module simprims_ver.LUT4
+Compiling module xil_defaultlib.RAM32M_HD5
+Compiling module xil_defaultlib.RAM32M_HD6
+Compiling module xil_defaultlib.FIFO
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.Interfaz
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.MUXF7
+Compiling module xil_defaultlib.UART
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_time_synth

@@ -1,0 +1,7 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/func/xsim/Top_tb_func_synth.v,1635709547,verilog,,C:/Users/TomasMartin/TP2/TP2.srcs/sources_1/new/UART.v,,ALU;FIFO;Interfaz;Top;glbl,,,,,,,,
+C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/Top_tb.v,1635709526,verilog,,,,Top_tb,,,,,,,,
+C:/Users/TomasMartin/TP2/TP2.srcs/sources_1/new/UART.v,1635467932,verilog,,C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/Top_tb.v,,UART,,,,,,,,

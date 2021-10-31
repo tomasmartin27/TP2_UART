@@ -66,13 +66,18 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 1
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint C:/Vivado/TP2/TP2.runs/impl_1/Top.dcp
-  set_property webtalk.parent_dir C:/Vivado/TP2/TP2.cache/wt [current_project]
-  set_property parent.project_path C:/Vivado/TP2/TP2.xpr [current_project]
-  set_property ip_output_repo C:/Vivado/TP2/TP2.cache/ip [current_project]
+  set_param chipscope.maxJobs 3
+  create_project -in_memory -part xc7a35tcpg236-1
+  set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+  set_property webtalk.parent_dir C:/Users/TomasMartin/TP2/TP2.cache/wt [current_project]
+  set_property parent.project_path C:/Users/TomasMartin/TP2/TP2.xpr [current_project]
+  set_property ip_output_repo C:/Users/TomasMartin/TP2/TP2.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  add_files -quiet C:/Users/TomasMartin/TP2/TP2.runs/synth_1/Top.dcp
+  read_xdc C:/Users/TomasMartin/TP2/TP2.srcs/constrs_1/new/Const.xdc
+  link_design -top Top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {

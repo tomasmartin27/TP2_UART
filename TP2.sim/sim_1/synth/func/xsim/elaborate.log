@@ -1,0 +1,18 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto f638b01cc97c4d0f836a5c53f275af56 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot Top_tb_func_synth xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'tx_start_UART' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/func/xsim/Top_tb_func_synth.v:2122]
+ERROR: [VRFC 10-3180] cannot find port 'tx_read' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/func/xsim/Top_tb_func_synth.v:2121]
+ERROR: [VRFC 10-3180] cannot find port 'tx_OBUF' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/func/xsim/Top_tb_func_synth.v:2120]
+ERROR: [VRFC 10-3180] cannot find port 'rx_write' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/func/xsim/Top_tb_func_synth.v:2119]
+ERROR: [VRFC 10-3180] cannot find port 'rx_IBUF' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/func/xsim/Top_tb_func_synth.v:2118]
+ERROR: [VRFC 10-3180] cannot find port 'r_write_enable' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/func/xsim/Top_tb_func_synth.v:2117]
+ERROR: [VRFC 10-3180] cannot find port 'r_memoria_reg_0_7_0_5' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/func/xsim/Top_tb_func_synth.v:2116]
+ERROR: [VRFC 10-3180] cannot find port 'SR' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/func/xsim/Top_tb_func_synth.v:2115]
+ERROR: [VRFC 10-3180] cannot find port 'Q' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/func/xsim/Top_tb_func_synth.v:2114]
+ERROR: [VRFC 10-3180] cannot find port 'D' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/func/xsim/Top_tb_func_synth.v:2113]
+ERROR: [VRFC 10-3180] cannot find port 'CLK' on this module [C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/func/xsim/Top_tb_func_synth.v:2112]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

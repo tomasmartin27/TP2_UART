@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Mon Oct 25 16:08:06 2021
-| Host             : TOMASMARTIN running 64-bit major release  (build 9200)
+| Date             : Sun Oct 31 17:01:08 2021
+| Host             : DESKTOP-98G2N7A running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
 | Device           : xc7a35tcpg236-1
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.074        |
+| Total On-Chip Power (W)  | 0.076        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.002        |
-| Device Static (W)        | 0.072        |
+| Device Static (W)        | 0.074        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
 | Junction Temperature (C) | 25.4         |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |      530 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |      212 |     20800 |            1.02 |
+| Slice Logic              |    <0.001 |      550 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |      222 |     20800 |            1.07 |
 |   CARRY4                 |    <0.001 |       21 |      8150 |            0.26 |
-|   Register               |    <0.001 |      173 |     41600 |            0.42 |
+|   Register               |    <0.001 |      183 |     41600 |            0.44 |
 |   LUT as Distributed RAM |    <0.001 |       16 |      9600 |            0.17 |
 |   F7/F8 Muxes            |    <0.001 |        1 |     32600 |           <0.01 |
 |   Others                 |     0.000 |        6 |       --- |             --- |
-| Signals                  |    <0.001 |      411 |       --- |             --- |
-| I/O                      |    <0.001 |        4 |       106 |            3.77 |
-| Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.074 |          |           |                 |
+| Signals                  |    <0.001 |      422 |       --- |             --- |
+| I/O                      |    <0.001 |       12 |       106 |           11.32 |
+| Static Power             |     0.074 |          |           |                 |
+| Total                    |     0.076 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |

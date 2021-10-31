@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Thu Oct 28 17:27:46 2021
+// Date        : Sun Oct 31 13:15:42 2021
 // Host        : DESKTOP-98G2N7A running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
 //               C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/UART_tb_time_synth.v

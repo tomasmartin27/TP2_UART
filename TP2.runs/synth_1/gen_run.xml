@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1635453622">
-  <File Type="PA-TCL" Name="UART.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="UART_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="UART_reports.tcl"/>
-  <File Type="RDS-RDS" Name="UART.vds"/>
-  <File Type="RDS-UTIL" Name="UART_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="UART_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="UART.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="UART_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="UART_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1635710372">
+  <File Type="PA-TCL" Name="Top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Top_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Top.vds"/>
+  <File Type="RDS-UTIL" Name="Top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/UART.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/ALU.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -28,7 +20,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/FIFO.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -36,7 +27,13 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Interfaz.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/UART.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -44,7 +41,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Top.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -52,7 +48,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="UART"/>
+      <Option Name="TopModule" Val="Top"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

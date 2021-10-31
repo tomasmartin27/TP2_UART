@@ -193,7 +193,7 @@ always@(posedge clock) begin: Memoria_transmisor
         t_bits <= 3'b000;
         t_data <= 1'b1;
         t_done <= 1'b0;
-        t_din <= {D_BITS-1{1'b0}};
+        t_din <= {D_BITS{1'b0}};
         t_stop_bits <= 2'b00;
         t_cont_unos <= 0;
     end
