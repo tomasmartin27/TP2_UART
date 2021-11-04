@@ -1,0 +1,30 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+datos = xxxxxxxx                   0
+datos = 10100111                  30
+datos = 01111111              625950
+datos = 00100000             1251870
+datos = 01100100             1877790
+resultado = 00100110             2451550
+datos = 00100010             2503710
+datos = 00100101             3129630
+datos = 00011001             3755550
+resultado = 01100110             4329310
+datos = 00000100             4381470
+datos = 00000011             5007390
+datos = 11101001             5633310
+resultado = 00000001             6207070
+datos = 10100110             6259230
+datos = 00100111             6885150
+datos = 10011110             7511070
+resultado = 00010000             8084830
+datos = 10010000             8136990
+datos = 00100111             8762910
+datos = 01000101             9388830
+resultado = 01100001             9962590
+datos = 01100001            10014750
+datos = 00000011            10640670
+datos = 00010110            11266590
+resultado = 00000000            11840350
+Test Pass
+$finish called at time : 11840350 ns : File "C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sim_1/new/Top_tb.v" Line 126

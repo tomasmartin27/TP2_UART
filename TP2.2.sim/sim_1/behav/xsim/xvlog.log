@@ -1,0 +1,24 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sources_1/new/BaudrateGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BaudrateGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sources_1/new/BaudrateGen1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BaudrateGen1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sources_1/new/FIFO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sources_1/new/Interfaz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Interfaz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sources_1/new/RX1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RX1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sources_1/new/Rx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sources_1/new/TX1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TX1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sources_1/new/Tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sources_1/new/UART.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UART
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb

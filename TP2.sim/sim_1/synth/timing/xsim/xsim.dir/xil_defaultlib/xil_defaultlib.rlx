@@ -1,8 +1,0 @@
-0.6
-2019.2
-Nov  6 2019
-21:57:16
-C:/Users/TomasMartin/TP2/TP2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v,1635710520,verilog,,C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/Top_tb.v,,ALU;FIFO;Interfaz;RAM32M_HD4;RAM32M_HD5;RAM32M_HD6;RAM32M_UNIQ_BASE_;Top;UART;glbl,,,,,,,,
-C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/ALU_tb.v,1635695608,verilog,,,,ALU_tb,,,,,,,,
-C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/Top_tb.v,1635698024,verilog,,,,Top_tb,,,,,,,,
-C:/Users/TomasMartin/TP2/TP2.srcs/sim_1/new/UART_tb.v,1635452604,verilog,,,,UART_tb,,,,,,,,
