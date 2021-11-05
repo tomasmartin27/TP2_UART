@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Wed Nov  3 21:48:00 2021
+// Date        : Thu Nov  4 19:27:41 2021
 // Host        : DESKTOP-98G2N7A running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
 //               C:/Users/TomasMartin/TP2.2/TP2.2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v
@@ -254,7 +254,7 @@ module RAM32M_UNIQ_BASE_
         .WE(WE));
 endmodule
 
-module RAM32M_HD33
+module RAM32M_HD7
    (DOA,
     DOB,
     DOC,
@@ -495,7 +495,7 @@ module RAM32M_HD33
         .WE(WE));
 endmodule
 
-module RAM32M_HD34
+module RAM32M_HD8
    (DOA,
     DOB,
     DOC,
@@ -736,7 +736,7 @@ module RAM32M_HD34
         .WE(WE));
 endmodule
 
-module RAM32M_HD35
+module RAM32M_HD9
    (DOA,
     DOB,
     DOC,
@@ -1541,7 +1541,7 @@ module FIFO
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "6" *) 
   (* ram_slice_end = "7" *) 
-  RAM32M_HD33 r_memoria_reg_0_7_6_7
+  RAM32M_HD7 r_memoria_reg_0_7_6_7
        (.ADDRA({1'b0,1'b0,r_read_ptr}),
         .ADDRB({1'b0,1'b0,r_read_ptr}),
         .ADDRC({1'b0,1'b0,r_read_ptr}),
@@ -1737,7 +1737,7 @@ module FIFO
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "0" *) 
   (* ram_slice_end = "5" *) 
-  RAM32M_HD34 t_memoria_reg_0_7_0_5
+  RAM32M_HD8 t_memoria_reg_0_7_0_5
        (.ADDRA({1'b0,1'b0,t_read_ptr}),
         .ADDRB({1'b0,1'b0,t_read_ptr}),
         .ADDRC({1'b0,1'b0,t_read_ptr}),
@@ -1764,7 +1764,7 @@ module FIFO
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "6" *) 
   (* ram_slice_end = "7" *) 
-  RAM32M_HD35 t_memoria_reg_0_7_6_7
+  RAM32M_HD9 t_memoria_reg_0_7_6_7
        (.ADDRA({1'b0,1'b0,t_read_ptr}),
         .ADDRB({1'b0,1'b0,t_read_ptr}),
         .ADDRC({1'b0,1'b0,t_read_ptr}),

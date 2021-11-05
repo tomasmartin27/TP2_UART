@@ -2,7 +2,7 @@
 2019.2
 Nov  6 2019
 21:57:16
-C:/Users/TomasMartin/TP2.2/TP2.2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v,1635986880,verilog,,C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sources_1/new/BaudrateGen1.v,,ALU;BaudrateGen;FIFO;Interfaz;RAM32M_HD33;RAM32M_HD34;RAM32M_HD35;RAM32M_UNIQ_BASE_;RX;TX;Top;glbl,,,,,,,,
+C:/Users/TomasMartin/TP2.2/TP2.2.sim/sim_1/synth/timing/xsim/Top_tb_time_synth.v,1636064861,verilog,,C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sources_1/new/BaudrateGen1.v,,ALU;BaudrateGen;FIFO;Interfaz;RAM32M_HD7;RAM32M_HD8;RAM32M_HD9;RAM32M_UNIQ_BASE_;RX;TX;Top;glbl,,,,,,,,
 C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sim_1/new/Top_tb.v,1635978931,verilog,,,,Top_tb,,,,,,,,
 C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sim_1/new/UART_tb.v,1635975929,verilog,,,,UART_tb,,,,,,,,
 C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sources_1/new/BaudrateGen1.v,1635970586,verilog,,C:/Users/TomasMartin/TP2.2/TP2.2.srcs/sources_1/new/RX1.v,,BaudrateGen1,,,,,,,,

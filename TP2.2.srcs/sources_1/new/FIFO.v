@@ -23,8 +23,8 @@ module FIFO
    
 );
 
-reg [D_BITS-1:0] r_memoria [SIZE_FIFO**2-1:0];
-reg [D_BITS-1:0] t_memoria [SIZE_FIFO**2-1:0];
+reg [D_BITS-1:0] r_memoria [2**SIZE_FIFO-1:0];
+reg [D_BITS-1:0] t_memoria [2**SIZE_FIFO-1:0];
 
 reg [SIZE_FIFO-1:0] r_write_ptr, r_w_ptr_next, r_w_ptr_sig;
 reg [SIZE_FIFO-1:0] r_read_ptr, r_r_ptr_next, r_r_ptr_sig;
@@ -40,8 +40,8 @@ integer i, i_next;
 
 always@(posedge clock) begin: Memoria_FIFO_receptor
     if(reset) begin
-       r_write_ptr<={SIZE_FIFO-1{1'b0}};
-       r_read_ptr<={SIZE_FIFO-1{1'b0}};
+       r_write_ptr<={SIZE_FIFO{1'b0}};
+       r_read_ptr<={SIZE_FIFO{1'b0}};
        r_full<=1'b0;
        r_empty<=1'b1;
     end
@@ -54,8 +54,8 @@ always@(posedge clock) begin: Memoria_FIFO_receptor
 end
 
 always@(*) begin: Logica_FIFO_receptor
-r_w_ptr_sig = r_write_ptr + {{SIZE_FIFO-2{1'b0}}, 1'b1};
-r_r_ptr_sig = r_read_ptr + {{SIZE_FIFO-2{1'b0}}, 1'b1};
+r_w_ptr_sig = r_write_ptr + {{SIZE_FIFO-1{1'b0}}, 1'b1};
+r_r_ptr_sig = r_read_ptr + {{SIZE_FIFO-1{1'b0}}, 1'b1};
 r_w_ptr_next = r_write_ptr;
 r_r_ptr_next = r_read_ptr;
 r_full_next = r_full;
@@ -100,8 +100,8 @@ assign rx_full = r_full;
 
 always@(posedge clock) begin: Memoria_FIFO_transmisor
     if(reset) begin
-       t_write_ptr<={SIZE_FIFO-1{1'b0}};
-       t_read_ptr<={SIZE_FIFO-1{1'b0}};
+       t_write_ptr<={SIZE_FIFO{1'b0}};
+       t_read_ptr<={SIZE_FIFO{1'b0}};
        t_full<=1'b0;
        t_empty<=1'b1;
        t_start<=1'b0;
@@ -118,8 +118,8 @@ always@(posedge clock) begin: Memoria_FIFO_transmisor
 end
 
 always@(*) begin: Logica_FIFO_transmisor
-t_w_ptr_sig = t_write_ptr + {{SIZE_FIFO-2{1'b0}}, 1'b1};
-t_r_ptr_sig = t_read_ptr + {{SIZE_FIFO-2{1'b0}}, 1'b1};
+t_w_ptr_sig = t_write_ptr + {{SIZE_FIFO-1{1'b0}}, 1'b1};
+t_r_ptr_sig = t_read_ptr + {{SIZE_FIFO-1{1'b0}}, 1'b1};
 t_w_ptr_next = t_write_ptr;
 t_r_ptr_next = t_read_ptr;
 t_full_next = t_full;

@@ -31,9 +31,9 @@ Compiling module simprims_ver.FDSE_default
 Compiling module simprims_ver.RAMD32
 Compiling module simprims_ver.RAMS32
 Compiling module xil_defaultlib.RAM32M_UNIQ_BASE_
-Compiling module xil_defaultlib.RAM32M_HD33
-Compiling module xil_defaultlib.RAM32M_HD34
-Compiling module xil_defaultlib.RAM32M_HD35
+Compiling module xil_defaultlib.RAM32M_HD7
+Compiling module xil_defaultlib.RAM32M_HD8
+Compiling module xil_defaultlib.RAM32M_HD9
 Compiling module xil_defaultlib.FIFO
 Compiling module simprims_ver.x_lut1_mux2
 Compiling module simprims_ver.LUT1

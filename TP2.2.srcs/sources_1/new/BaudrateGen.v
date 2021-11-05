@@ -19,7 +19,7 @@ always@(posedge clock) begin: Baudrate_generator
     else count <= count1; 
 end
 
-assign count1 = (count==CLK_POR_TICK-1)? 0 : count + 1'b1;
+assign count1 = (count==CLK_POR_TICK-1)? {12{1'b0}} : count + 1'b1;
 assign ticks = (count==CLK_POR_TICK-1)? 1'b1 : 1'b0;
 
 endmodule 

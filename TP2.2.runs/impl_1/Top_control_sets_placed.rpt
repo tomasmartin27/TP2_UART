@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Wed Nov  3 21:45:01 2021
+| Date         : Thu Nov  4 20:27:44 2021
 | Host         : DESKTOP-98G2N7A running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
 | Design       : Top
@@ -75,21 +75,21 @@ Table of Contents
 +------------------+---------------------------+------------------+------------------+----------------+
 |  clock_IBUF_BUFG |                           |                  |                1 |              1 |
 |  clock_IBUF_BUFG | my_tx/t_data_next         | reset_IBUF       |                1 |              1 |
-|  clock_IBUF_BUFG | my_rx/r_ticks_next        | reset_IBUF       |                2 |              4 |
 |  clock_IBUF_BUFG | my_tx/t_ticks_next        | reset_IBUF       |                1 |              4 |
+|  clock_IBUF_BUFG | my_rx/r_ticks_next        | reset_IBUF       |                2 |              4 |
+|  clock_IBUF_BUFG | my_tx/t_state[4]_i_1_n_0  | reset_IBUF       |                2 |              5 |
 |  clock_IBUF_BUFG | interfaz/state[4]_i_1_n_0 | reset_IBUF       |                2 |              5 |
 |  clock_IBUF_BUFG | my_rx/r_state[4]_i_1_n_0  | reset_IBUF       |                3 |              5 |
-|  clock_IBUF_BUFG | my_tx/t_state[4]_i_1_n_0  | reset_IBUF       |                2 |              5 |
-|  clock_IBUF_BUFG | interfaz/op_next          | reset_IBUF       |                3 |              8 |
+|  clock_IBUF_BUFG | my_tx/t_din_next          | reset_IBUF       |                2 |              8 |
 |  clock_IBUF_BUFG | interfaz/a[7]_i_1_n_0     | reset_IBUF       |                3 |              8 |
+|  clock_IBUF_BUFG | interfaz/op_next          | reset_IBUF       |                3 |              8 |
 |  clock_IBUF_BUFG | interfaz/b_next           | reset_IBUF       |                2 |              8 |
 |  clock_IBUF_BUFG | my_rx/r_data_next         | reset_IBUF       |                1 |              8 |
-|  clock_IBUF_BUFG | my_tx/t_din_next          | reset_IBUF       |                2 |              8 |
 |  clock_IBUF_BUFG | interfaz/write_next       | reset_IBUF       |                6 |              9 |
 |  clock_IBUF_BUFG | interfaz/t_write_enable   |                  |                2 |             16 |
 |  clock_IBUF_BUFG | my_rx/r_write_enable      |                  |                2 |             16 |
-|  clock_IBUF_BUFG | my_rx/r_cont_unos_next_0  | reset_IBUF       |                9 |             32 |
 |  clock_IBUF_BUFG | my_tx/t_cont_unos_next_0  | reset_IBUF       |                6 |             32 |
+|  clock_IBUF_BUFG | my_rx/r_cont_unos_next_0  | reset_IBUF       |                9 |             32 |
 |  clock_IBUF_BUFG |                           | reset_IBUF       |               17 |             45 |
 +------------------+---------------------------+------------------+------------------+----------------+
 
